@@ -15,7 +15,7 @@ var random = function (number) {
 function getPassword() {
   window.alert("Let's create a password!")
   console.log("Let's create a password!")
-  var passwordLength = prompt ("Choose between 8 and 128 characters")
+  passwordLength = prompt ("Choose between 8 and 128 characters")
   console.log("You chose " +  passwordLength + " characters.")
 
   
@@ -69,12 +69,13 @@ function passwordValidator() {
   }
   else {
     var passwordarray = passwordCharacters.split("");
+    console.log(passwordLength)
     while(passwordString.length < passwordLength){
       var number = random(passwordarray.length)
       passwordString = passwordString + passwordarray[number]
     }
+    return
   }
-
 }
 
 
